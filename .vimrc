@@ -1,6 +1,6 @@
 " Use the Solarized Dark theme
-"set background=dark
-"colorscheme solarized
+" set background=dark
+" colorscheme solarized
 
 " Make Vim more useful
 set nocompatible
@@ -50,7 +50,7 @@ set list
 " Highlight searches
 set hlsearch
 " Ignore case of searches
-set ignorecase
+" set ignorecase
 " Highlight dynamically as pattern is typed
 set incsearch
 " Always show status line
@@ -101,16 +101,20 @@ endif
 
 " NeoBundle
 if has("vim_starting")
-	set nocompatible
-
-	" Required:
+"	set nocompatible
 	set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
-" Required:
 call neobundle#begin(expand('~/.vim/bundle/'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
+
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/vimproc'
+NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'Shougo/neosnippet'
+NeoBundle 'Shougo/neosnippet-snippets'
+NeoBundle 'scrooloose/nerdtree'
 
 call neobundle#end()
 
